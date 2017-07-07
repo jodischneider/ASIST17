@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title id="title">
+Tap: wizardly_leakey
+  </title>
+  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet"/>
+  <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+  <script charset="utf-8" src="https://d3js.org/d3.v3.min.js">
+  </script>
+  <script id="dataAdjacency" type="text/json">
+   {"directed": true, "graph": {}, "nodes": [{"group": "CEN", "id": "CEN.Midwest"}, {"group": "CEN", "id": "CEN.South"}, {"group": "TZ", "id": "TZ.Eastern"}, {"group": "TZ", "id": "TZ.USA"}, {"group": "TZ", "id": "TZ.Central"}, {"group": "TZ", "id": "TZ.Mountain"}, {"group": "CEN", "id": "CEN.USA"}, {"group": "CEN", "id": "CEN.West"}, {"group": "CEN", "id": "CEN.Northeast"}, {"group": "TZ", "id": "TZ.Pacific"}], "links": [{"source": 0, "relation": "taxonomy_incoming.CEN", "target": 6, "key": 0}, {"source": 0, "relation": "overlaps", "target": 5, "key": 0}, {"source": 0, "relation": "overlaps", "target": 2, "key": 0}, {"source": 0, "relation": "disjoint", "target": 9, "key": 0}, {"source": 1, "relation": "overlaps", "target": 5, "key": 0}, {"source": 1, "relation": "taxonomy_incoming.CEN", "target": 6, "key": 0}, {"source": 1, "relation": "overlaps", "target": 4, "key": 0}, {"source": 1, "relation": "overlaps", "target": 2, "key": 0}, {"source": 1, "relation": "disjoint", "target": 9, "key": 0}, {"source": 2, "relation": "overlaps", "target": 0, "key": 0}, {"source": 2, "relation": "overlaps", "target": 1, "key": 0}, {"source": 2, "relation": "includes", "target": 8, "key": 0}, {"source": 2, "relation": "disjoint", "target": 7, "key": 0}, {"source": 2, "relation": "taxonomy_incoming.TZ", "target": 3, "key": 0}, {"source": 3, "relation": "taxonomy_outgoing.TZ", "target": 2, "key": 0}, {"source": 3, "relation": "equals", "target": 6, "key": 0}, {"source": 3, "relation": "taxonomy_outgoing.TZ", "target": 4, "key": 0}, {"source": 3, "relation": "taxonomy_outgoing.TZ", "target": 5, "key": 0}, {"source": 3, "relation": "taxonomy_outgoing.TZ", "target": 9, "key": 0}, {"source": 4, "relation": "overlaps", "target": 1, "key": 0}, {"source": 4, "relation": "disjoint", "target": 7, "key": 0}, {"source": 4, "relation": "taxonomy_incoming.TZ", "target": 3, "key": 0}, {"source": 5, "relation": "overlaps", "target": 0, "key": 0}, {"source": 5, "relation": "overlaps", "target": 1, "key": 0}, {"source": 5, "relation": "overlaps", "target": 7, "key": 0}, {"source": 5, "relation": "taxonomy_incoming.TZ", "target": 3, "key": 0}, {"source": 6, "relation": "taxonomy_outgoing.CEN", "target": 0, "key": 0}, {"source": 6, "relation": "taxonomy_outgoing.CEN", "target": 1, "key": 0}, {"source": 6, "relation": "equals", "target": 3, "key": 0}, {"source": 6, "relation": "taxonomy_outgoing.CEN", "target": 7, "key": 0}, {"source": 6, "relation": "taxonomy_outgoing.CEN", "target": 8, "key": 0}, {"source": 7, "relation": "overlaps", "target": 5, "key": 0}, {"source": 7, "relation": "taxonomy_incoming.CEN", "target": 6, "key": 0}, {"source": 7, "relation": "disjoint", "target": 4, "key": 0}, {"source": 7, "relation": "disjoint", "target": 2, "key": 0}, {"source": 8, "relation": "taxonomy_incoming.CEN", "target": 6, "key": 0}, {"source": 8, "relation": "is_included_in", "target": 2, "key": 0}, {"source": 9, "relation": "disjoint", "target": 0, "key": 0}, {"source": 9, "relation": "disjoint", "target": 1, "key": 0}, {"source": 9, "relation": "taxonomy_incoming.TZ", "target": 3, "key": 0}], "multigraph": true}
+  </script>
+  <script id="dataAdjacency1x1" type="text/json">
+   {"directed": true, "graph": {}, "nodes": [{"group": "CEN", "id": "CEN.Midwest"}, {"group": "CEN", "id": "CEN.South"}, {"group": "TZ", "id": "TZ.Eastern"}, {"group": "TZ", "id": "TZ.USA"}, {"group": "TZ", "id": "TZ.Central"}, {"group": "TZ", "id": "TZ.Mountain"}, {"group": "CEN", "id": "CEN.USA"}, {"group": "CEN", "id": "CEN.West"}, {"group": "CEN", "id": "CEN.Northeast"}, {"group": "TZ", "id": "TZ.Pacific"}], "links": [{"source": 0, "relation": "overlaps", "target": 5, "key": 0}, {"source": 0, "relation": "overlaps", "target": 2, "key": 0}, {"source": 0, "relation": "disjoint", "target": 9, "key": 0}, {"source": 1, "relation": "overlaps", "target": 5, "key": 0}, {"source": 1, "relation": "overlaps", "target": 4, "key": 0}, {"source": 1, "relation": "overlaps", "target": 2, "key": 0}, {"source": 1, "relation": "disjoint", "target": 9, "key": 0}, {"source": 6, "relation": "equals", "target": 3, "key": 0}, {"source": 7, "relation": "overlaps", "target": 5, "key": 0}, {"source": 7, "relation": "disjoint", "target": 4, "key": 0}, {"source": 7, "relation": "disjoint", "target": 2, "key": 0}, {"source": 8, "relation": "is_included_in", "target": 2, "key": 0}], "multigraph": true}
+  </script>
+  <style type="text/css">
+   .container {
+	width: initial;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+div#visualization button#zoomin {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+  z-index: 99;
+}
+div#visualization button#zoomout {
+  position: absolute;
+  right: 30px;
+  top: 80px;
+  z-index: 99;
+}	
+div#visualization button#reset {
+  position: absolute;
+  right: 30px;
+  top: 110px;
+  z-index: 99;
+}
+
+
+div#adjacency1x1 text.activeLegend {
+  fill: khaki;
+  font-weight: bold;
+}
+div#adjacency1x1 text.activeTick {
+   fill: khaki;
+   font-weight: bold;
+}
+div#adjacency1x1 button#zoomin {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+  z-index: 99;
+}
+div#adjacency1x1 button#zoomout {
+  position: absolute;
+  right: 30px;
+  top: 80px;
+  z-index: 99;
+}	
+div#adjacency1x1 button#reset {
+  position: absolute;
+  right: 30px;
+  top: 110px;
+  z-index: 99;
+}
+
+
+div#adjacency text.activeLegend {
+  fill: khaki;
+  font-weight: bold;
+}
+div#adjacency text.activeTick {
+   fill: khaki;
+   font-weight: bold;
+}
+div#adjacency button#zoomin {
+  position: absolute;
+  right: 30px;
+  top: 50px;
+  z-index: 99;
+}
+div#adjacency button#zoomout {
+  position: absolute;
+  right: 30px;
+  top: 80px;
+  z-index: 99;
+}	
+div#adjacency button#reset {
+  position: absolute;
+  right: 30px;
+  top: 110px;
+  z-index: 99;
+}
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <ul class="nav nav-tabs">
+    <li class="active">
+     <a data-toggle="tab" href="#cleantax">
+      Cleantax
+     </a>
+    </li>
+    <li>
+     <a data-toggle="tab" href="#visualization">
+      Visualization
+     </a>
+    </li>
+    <li>
+     <a data-toggle="tab" href="#adjacency1x1">
+      Adjacency 1x1
+     </a>
+    </li>
+    <li>
+     <a data-toggle="tab" href="#adjacency">
+      Adjacency
+     </a>
+    </li>
+   </ul>
+   <div class="tab-content">
+    <div class="tab-pane fade in active" id="cleantax">
+     <textarea cols="150" disabled="" id="cleantax-textarea" rows="30">taxonomy CEN Census_Regions
+(USA Midwest Northeast South West)
+
+taxonomy TZ Time_Zone
+(USA Central Eastern Mountain Pacific)
+
+articulation
+[CEN.Midwest disjoint TZ.Pacific]
+[CEN.South disjoint TZ.Pacific]
+[CEN.West disjoint TZ.Central]
+[CEN.West disjoint TZ.Eastern]
+[CEN.USA equals TZ.USA]
+[CEN.Northeast is_included_in TZ.Eastern]
+[CEN.Midwest overlaps TZ.Eastern]
+[CEN.Midwest overlaps TZ.Mountain]
+[CEN.South overlaps TZ.Central]
+[CEN.South overlaps TZ.Eastern]
+[CEN.South overlaps TZ.Mountain]
+[CEN.West overlaps TZ.Mountain]
+</textarea>
+    </div>
+    <div class="tab-pane fade" id="visualization">
+     <button id="zoomin">
+      Zoom in
+     </button>
+     <button id="zoomout">
+      Zoom out
+     </button>
+     <button id="reset">
+      Reset
+     </button>
+<svg height="519pt" viewbox="0.00 0.00 660.30 518.61" width="660pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g class="graph" id="graph0" transform="scale(1 1) rotate(0) translate(4 514.608)">
+  <title>
+   %3
+  </title>
+  <polygon fill="white" points="-4,4 -4,-514.608 656.304,-514.608 656.304,4 -4,4" stroke="none">
+  </polygon>
+  <!-- CEN.Northeast -->
+  <g class="node" id="node1">
+   <title>
+    CEN.Northeast
+   </title>
+   <polygon fill="#ccffcc" points="348,-487.853 241,-487.853 241,-451.853 348,-451.853 348,-487.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="294.5" y="-466.153">
+    CEN.Northeast
+   </text>
+  </g>
+  <!-- TZ.Eastern -->
+  <g class="node" id="node7">
+   <title>
+    TZ.Eastern
+   </title>
+   <polygon fill="#ffffcc" points="516.705,-339.397 516.705,-354.309 482.565,-364.853 434.284,-364.853 400.145,-354.309 400.145,-339.397 434.284,-328.853 482.565,-328.853 516.705,-339.397" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="458.425" y="-343.153">
+    TZ.Eastern
+   </text>
+  </g>
+  <!-- CEN.Northeast&#45;&gt;TZ.Eastern -->
+  <g class="edge" id="edge13">
+   <title>
+    CEN.Northeast-&gt;TZ.Eastern
+   </title>
+   <path d="M348.142,-452.603C357.479,-448.462 366.822,-443.554 375,-437.853 400.4,-420.149 423.511,-393.24 438.754,-373.271" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="441.613,-375.292 444.789,-365.184 436.003,-371.105 441.613,-375.292" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-446.653">
+    &lt;
+   </text>
+  </g>
+  <!-- CEN.Midwest -->
+  <g class="node" id="node2">
+   <title>
+    CEN.Midwest
+   </title>
+   <polygon fill="#ccffcc" points="344,-415.853 245,-415.853 245,-379.853 344,-379.853 344,-415.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="294.5" y="-394.153">
+    CEN.Midwest
+   </text>
+  </g>
+  <!-- CEN.Midwest&#45;&gt;TZ.Eastern -->
+  <g class="edge" id="edge18">
+   <title>
+    CEN.Midwest-&gt;TZ.Eastern
+   </title>
+   <path d="M333.246,-415.872C346.635,-419.918 361.679,-421.746 375,-416.853 399.08,-408.008 420.936,-388.663 436.083,-372.546" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="438.841,-374.715 442.96,-364.954 433.652,-370.016 438.841,-374.715" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-422.653">
+    o
+   </text>
+  </g>
+  <!-- TZ.Mountain -->
+  <g class="node" id="node8">
+   <title>
+    TZ.Mountain
+   </title>
+   <polygon fill="#ffffcc" points="523.774,-186.397 523.774,-201.309 485.494,-211.853 431.356,-211.853 393.075,-201.309 393.075,-186.397 431.356,-175.853 485.494,-175.853 523.774,-186.397" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="458.425" y="-190.153">
+    TZ.Mountain
+   </text>
+  </g>
+  <!-- CEN.Midwest&#45;&gt;TZ.Mountain -->
+  <g class="edge" id="edge14">
+   <title>
+    CEN.Midwest-&gt;TZ.Mountain
+   </title>
+   <path d="M301.545,-379.543C311.544,-351.279 333.683,-296.371 366,-258.853 380.504,-242.016 400.242,-227.274 417.667,-216.105" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="419.883,-218.849 426.529,-210.598 416.188,-212.904 419.883,-218.849" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-262.653">
+    o
+   </text>
+  </g>
+  <!-- TZ.Pacific -->
+  <g class="node" id="node9">
+   <title>
+    TZ.Pacific
+   </title>
+   <polygon fill="#ffffcc" points="512.763,-288.397 512.763,-303.309 480.932,-313.853 435.917,-313.853 404.086,-303.309 404.086,-288.397 435.917,-277.853 480.932,-277.853 512.763,-288.397" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="458.425" y="-292.153">
+    TZ.Pacific
+   </text>
+  </g>
+  <!-- CEN.Midwest&#45;&gt;TZ.Pacific -->
+  <g class="edge" id="edge17">
+   <title>
+    CEN.Midwest-&gt;TZ.Pacific
+   </title>
+   <path d="M344.271,-385.441C355.447,-380.764 366.52,-374.416 375,-365.853 390.448,-350.255 377.35,-335.249 393,-319.853 396.435,-316.474 400.39,-313.563 404.614,-311.058" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="406.278,-314.138 413.583,-306.464 403.087,-307.907 406.278,-314.138" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-377.653">
+    !
+   </text>
+  </g>
+  <!-- CEN.South -->
+  <g class="node" id="node3">
+   <title>
+    CEN.South
+   </title>
+   <polygon fill="#ccffcc" points="336.5,-211.853 252.5,-211.853 252.5,-175.853 336.5,-175.853 336.5,-211.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="294.5" y="-190.153">
+    CEN.South
+   </text>
+  </g>
+  <!-- CEN.South&#45;&gt;TZ.Eastern -->
+  <g class="edge" id="edge19">
+   <title>
+    CEN.South-&gt;TZ.Eastern
+   </title>
+   <path d="M301.527,-212.149C311.105,-238.494 332.247,-286.998 366,-314.853 375.62,-322.793 387.34,-328.818 399.136,-333.371" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="397.979,-336.674 408.574,-336.716 400.318,-330.076 397.979,-336.674" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-325.653">
+    o
+   </text>
+  </g>
+  <!-- CEN.South&#45;&gt;TZ.Mountain -->
+  <g class="edge" id="edge12">
+   <title>
+    CEN.South-&gt;TZ.Mountain
+   </title>
+   <path d="M322.388,-175.811C335.046,-168.374 350.7,-160.624 366,-156.853 386.528,-151.794 408.523,-160.223 425.794,-170.305" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="424.028,-173.329 434.362,-175.666 427.741,-167.395 424.028,-173.329" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-160.653">
+    o
+   </text>
+  </g>
+  <!-- CEN.South&#45;&gt;TZ.Pacific -->
+  <g class="edge" id="edge15">
+   <title>
+    CEN.South-&gt;TZ.Pacific
+   </title>
+   <path d="M336.798,-196.042C349.619,-198.028 363.415,-201.581 375,-207.853 389.408,-215.654 417.016,-246.82 436.293,-269.859" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="433.651,-272.155 442.729,-277.618 439.038,-267.686 433.651,-272.155" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-211.653">
+    !
+   </text>
+  </g>
+  <!-- TZ.Central -->
+  <g class="node" id="node10">
+   <title>
+    TZ.Central
+   </title>
+   <polygon fill="#ffffcc" points="514.484,-84.3975 514.484,-99.3092 481.645,-109.853 435.204,-109.853 402.365,-99.3092 402.365,-84.3975 435.204,-73.8533 481.645,-73.8533 514.484,-84.3975" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="458.425" y="-88.1533">
+    TZ.Central
+   </text>
+  </g>
+  <!-- CEN.South&#45;&gt;TZ.Central -->
+  <g class="edge" id="edge16">
+   <title>
+    CEN.South-&gt;TZ.Central
+   </title>
+   <path d="M315.56,-175.62C329.193,-163.747 347.963,-148.38 366,-136.853 381.061,-127.229 398.473,-118.192 414.036,-110.778" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="415.87,-113.784 423.449,-106.381 412.907,-107.442 415.87,-113.784" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-140.653">
+    o
+   </text>
+  </g>
+  <!-- CEN.USA -->
+  <g class="node" id="node4">
+   <title>
+    CEN.USA
+   </title>
+   <polygon fill="#ccffcc" points="204,-415.853 127,-415.853 127,-379.853 204,-379.853 204,-415.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="165.5" y="-394.153">
+    CEN.USA
+   </text>
+  </g>
+  <!-- CEN.USA&#45;&gt;CEN.Northeast -->
+  <g class="edge" id="edge3">
+   <title>
+    CEN.USA-&gt;CEN.Northeast
+   </title>
+   <path d="M207.428,-421.057C224.933,-430.981 245.07,-442.397 261.463,-451.69" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="208.973,-417.909 198.547,-416.022 205.521,-423.999 208.973,-417.909" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- CEN.USA&#45;&gt;CEN.Midwest -->
+  <g class="edge" id="edge1">
+   <title>
+    CEN.USA-&gt;CEN.Midwest
+   </title>
+   <path d="M214.387,-397.853C224.336,-397.853 234.831,-397.853 244.808,-397.853" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="214.26,-394.353 204.26,-397.853 214.26,-401.353 214.26,-394.353" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- CEN.USA&#45;&gt;CEN.South -->
+  <g class="edge" id="edge4">
+   <title>
+    CEN.USA-&gt;CEN.South
+   </title>
+   <path d="M183.144,-371.118C209.418,-328.914 259.823,-247.949 282.255,-211.916" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="180.084,-369.411 177.77,-379.75 186.027,-373.11 180.084,-369.411" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- CEN.West -->
+  <g class="node" id="node5">
+   <title>
+    CEN.West
+   </title>
+   <polygon fill="#ccffcc" points="334.5,-114.853 254.5,-114.853 254.5,-78.8533 334.5,-78.8533 334.5,-114.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="294.5" y="-93.1533">
+    CEN.West
+   </text>
+  </g>
+  <!-- CEN.USA&#45;&gt;CEN.West -->
+  <g class="edge" id="edge2">
+   <title>
+    CEN.USA-&gt;CEN.West
+   </title>
+   <path d="M172.367,-369.821C182.404,-325.142 205.307,-235.793 241,-166.853 250.848,-147.832 265.774,-128.529 277.197,-115.024" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="168.93,-369.154 170.201,-379.672 175.767,-370.657 168.93,-369.154" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- TZ.USA -->
+  <g class="node" id="node6">
+   <title>
+    TZ.USA
+   </title>
+   <polygon fill="#ffffcc" points="652.532,-288.397 652.532,-303.309 625.612,-313.853 587.541,-313.853 560.621,-303.309 560.621,-288.397 587.541,-277.853 625.612,-277.853 652.532,-288.397" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="middle" x="606.577" y="-292.153">
+    TZ.USA
+   </text>
+  </g>
+  <!-- CEN.USA&#45;&gt;TZ.USA -->
+  <g class="edge" id="edge20">
+   <title>
+    CEN.USA-&gt;TZ.USA
+   </title>
+   <path d="M173.855,-415.863C184.615,-439.496 207.125,-479.95 241,-496.853 283.552,-518.086 302.642,-511.142 348,-496.853 451.35,-464.296 543.885,-368.405 584.197,-321.829" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="587.052,-323.875 590.884,-313.998 581.729,-319.33 587.052,-323.875" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-493.653">
+    =
+   </text>
+  </g>
+  <!-- CEN.West&#45;&gt;TZ.Eastern -->
+  <g class="edge" id="edge9">
+   <title>
+    CEN.West-&gt;TZ.Eastern
+   </title>
+   <path d="M312.907,-114.906C324.703,-128.205 339.619,-147.307 348,-166.853 367.005,-211.174 350.139,-228.313 366,-273.853 370.089,-285.594 383.587,-314.732 393,-322.853 396.396,-325.783 400.183,-328.37 404.173,-330.652" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="402.654,-333.805 413.16,-335.173 405.8,-327.552 402.654,-333.805" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-299.653">
+    !
+   </text>
+  </g>
+  <!-- CEN.West&#45;&gt;TZ.Mountain -->
+  <g class="edge" id="edge10">
+   <title>
+    CEN.West-&gt;TZ.Mountain
+   </title>
+   <path d="M310.712,-78.8095C327.378,-61.244 354.47,-39.3006 375,-54.8533 398.553,-72.6957 379.044,-92.809 393,-118.853 402.692,-136.939 417.38,-154.488 430.285,-168.058" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="428.131,-170.861 437.626,-175.561 433.134,-165.966 428.131,-170.861" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-58.6533">
+    o
+   </text>
+  </g>
+  <!-- CEN.West&#45;&gt;TZ.Central -->
+  <g class="edge" id="edge11">
+   <title>
+    CEN.West-&gt;TZ.Central
+   </title>
+   <path d="M303.028,-78.7824C313.449,-56.4367 334.609,-19.4479 366,-3.85331 399.972,13.0239 429.605,-32.6136 445.367,-64.3054" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="442.34,-66.0883 449.803,-73.6084 448.658,-63.0756 442.34,-66.0883" stroke="#000000">
+   </polygon>
+   <text font-family="Times,serif" font-size="14.00" text-anchor="middle" x="370.5" y="-7.65331">
+    !
+   </text>
+  </g>
+  <!-- TZ.Eastern&#45;&gt;TZ.USA -->
+  <g class="edge" id="edge6">
+   <title>
+    TZ.Eastern-&gt;TZ.USA
+   </title>
+   <path d="M497.824,-333.454C517.448,-326.606 541.416,-318.242 561.759,-311.143" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="563.132,-314.372 571.42,-307.772 560.825,-307.762 563.132,-314.372" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- TZ.Mountain&#45;&gt;TZ.USA -->
+  <g class="edge" id="edge7">
+   <title>
+    TZ.Mountain-&gt;TZ.USA
+   </title>
+   <path d="M485.217,-211.854C510.063,-229.194 547.688,-255.453 574.245,-273.987" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="572.245,-276.859 582.449,-279.712 576.251,-271.119 572.245,-276.859" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- TZ.Pacific&#45;&gt;TZ.USA -->
+  <g class="edge" id="edge5">
+   <title>
+    TZ.Pacific-&gt;TZ.USA
+   </title>
+   <path d="M512.602,-295.853C524.845,-295.853 537.894,-295.853 550.227,-295.853" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="550.384,-299.353 560.384,-295.853 550.384,-292.353 550.384,-299.353" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- TZ.Central&#45;&gt;TZ.USA -->
+  <g class="edge" id="edge8">
+   <title>
+    TZ.Central-&gt;TZ.USA
+   </title>
+   <path d="M476.353,-110.035C489.823,-124.853 508.837,-146.572 523.85,-166.853 548.965,-200.784 574.455,-242.411 590.137,-269.034" fill="none" stroke="#000000">
+   </path>
+   <polygon fill="#000000" points="587.188,-270.924 595.258,-277.788 593.23,-267.389 587.188,-270.924" stroke="#000000">
+   </polygon>
+  </g>
+  <!-- Legend -->
+  <g class="node" id="node11">
+   <title>
+    Legend
+   </title>
+   <polygon fill="white" points="109,-485.353 0,-485.353 0,-310.353 109,-310.353 109,-485.353" stroke="black">
+   </polygon>
+   <polygon fill="none" points="0.5,-459.853 0.5,-484.853 109.5,-484.853 109.5,-459.853 0.5,-459.853" stroke="black">
+   </polygon>
+   <text font-family="Arial Black" font-size="14.00" text-anchor="start" x="30.5" y="-468.653">
+    Nodes
+   </text>
+   <polygon fill="#ccffcc" points="0.5,-434.853 0.5,-459.853 83.5,-459.853 83.5,-434.853 0.5,-434.853" stroke="none">
+   </polygon>
+   <polygon fill="none" points="0.5,-434.853 0.5,-459.853 83.5,-459.853 83.5,-434.853 0.5,-434.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="start" x="27.5" y="-443.653">
+    CEN
+   </text>
+   <polygon fill="none" points="83.5,-434.853 83.5,-459.853 109.5,-459.853 109.5,-434.853 83.5,-434.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="start" x="92.5" y="-443.653">
+    5
+   </text>
+   <polygon fill="#ffffcc" points="0.5,-409.853 0.5,-434.853 83.5,-434.853 83.5,-409.853 0.5,-409.853" stroke="none">
+   </polygon>
+   <polygon fill="none" points="0.5,-409.853 0.5,-434.853 83.5,-434.853 83.5,-409.853 0.5,-409.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="start" x="33.5" y="-418.653">
+    TZ
+   </text>
+   <polygon fill="none" points="83.5,-409.853 83.5,-434.853 109.5,-434.853 109.5,-409.853 83.5,-409.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="start" x="92.5" y="-418.653">
+    5
+   </text>
+   <polygon fill="none" points="0.5,-384.853 0.5,-409.853 109.5,-409.853 109.5,-384.853 0.5,-384.853" stroke="black">
+   </polygon>
+   <text font-family="Arial Black" font-size="14.00" text-anchor="start" x="29" y="-393.653">
+    Edges
+   </text>
+   <polygon fill="none" points="0.5,-359.853 0.5,-384.853 83.5,-384.853 83.5,-359.853 0.5,-359.853" stroke="black">
+   </polygon>
+   <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="start" x="8.5" y="-368.653">
+    is_a (CEN)
+   </text>
+   <polygon fill="none" points="83.5,-359.853 83.5,-384.853 109.5,-384.853 109.5,-359.853 83.5,-359.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="start" x="92.5" y="-368.653">
+    4
+   </text>
+   <polygon fill="none" points="0.5,-334.853 0.5,-359.853 83.5,-359.853 83.5,-334.853 0.5,-334.853" stroke="black">
+   </polygon>
+   <text fill="#000000" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="start" x="14.5" y="-343.653">
+    is_a (TZ)
+   </text>
+   <polygon fill="none" points="83.5,-334.853 83.5,-359.853 109.5,-359.853 109.5,-334.853 83.5,-334.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="start" x="92.5" y="-343.653">
+    4
+   </text>
+   <polygon fill="none" points="0.5,-309.853 0.5,-334.853 83.5,-334.853 83.5,-309.853 0.5,-309.853" stroke="black">
+   </polygon>
+   <text fill="#aa00ff" font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="start" x="5.5" y="-318.653">
+    articulations
+   </text>
+   <polygon fill="none" points="83.5,-309.853 83.5,-334.853 109.5,-334.853 109.5,-309.853 83.5,-309.853" stroke="black">
+   </polygon>
+   <text font-family="Helvetica,sans-Serif" font-size="14.00" text-anchor="start" x="88.5" y="-318.653">
+    12
+   </text>
+  </g>
+ </g>
+</svg>
+    </div>
+    <div class="tab-pane fade" id="adjacency1x1">
+     <button id="zoomin">
+      Zoom in
+     </button>
+     <button id="zoomout">
+      Zoom out
+     </button>
+     <button id="reset">
+      Reset
+     </button>
+    </div>
+    <div class="tab-pane fade" id="adjacency">
+     <button id="zoomin">
+      Zoom in
+     </button>
+     <button id="zoomout">
+      Zoom out
+     </button>
+     <button id="reset">
+      Reset
+     </button>
+    </div>
+   </div>
+  </div>
+  <script id="visualization">
+   createVisualization();
+function createVisualization() {
+	var size = {
+	  width: document.body.clientWidth || window.innerWidth,
+	  height: document.body.clientHeight || window.innerHeight
+	}
+
+	var oldSvg = d3.select("div#visualization svg")
+	var graphG = d3.select("div#visualization svg g.graph");
+	oldSvg.remove();
+
+	var margin = {top: 0, right: 0, bottom: 0, left: 0},
+		width = size['width'] - margin.left - margin.right,
+		height = size['height'] - 1 - margin.top - margin.bottom;
+
+	var x = d3.scale.linear()
+		.domain([-width / 2, width / 2])
+		.range([0, width]);
+
+	var y = d3.scale.linear()
+		.domain([-height / 2, height / 2])
+		.range([height, 0]);
+
+	var zoom = d3.behavior.zoom()
+		.x(x)
+		.y(y)
+		.scaleExtent([0.1, 32])
+		.on("zoom", zoom);
+
+	var svg = d3.select("#visualization").append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+		.append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+		.call(zoom)
+		.append(function() {
+			return graphG.node();
+		});
+
+	function zoom() {
+		x = d3.event.translate[0]
+		y = d3.event.translate[1]
+		graphG.attr("transform", "translate(" + d3.event.translate + ") scale(" + d3.event.scale + ")");
+	}
+
+
+	d3.select("div#visualization button#reset").on("click", reset);
+	d3.select("div#visualization button#zoomin").on("click", zoomIn);
+	d3.select("div#visualization button#zoomout").on("click", zoomOut);
+
+	var originalWidth = Number(oldSvg.attr("width").slice(0, -2));
+	var originalHeight = Number(oldSvg.attr("width").slice(0, -2));
+	initialScale = Math.min(width/originalWidth, height/originalHeight) * 0.7
+	var t = d3.transform(graphG.attr("transform")),
+			initialX = (size['width'] - (initialScale * originalWidth))/2, //t.translate[0],
+			initialY = size['height'] * 0.8, //t.translate[1],
+			initialS = initialScale; //t.scale[0];
+			
+	function zoomIn() {
+		var t = d3.transform(graphG.attr("transform")),
+			x = t.translate[0],
+			y = t.translate[1],
+			s = t.scale[0];
+		var newScale = (s + 0.1);
+		zoom.scale(newScale)
+		graphG.attr("transform", "translate(" + x + " ," + y + ") scale(" + newScale + ")");
+	}
+
+	function zoomOut() {
+		var t = d3.transform(graphG.attr("transform")),
+			x = t.translate[0],
+			y = t.translate[1],
+			s = t.scale[0];
+		var newScale = (s - 0.1);
+		zoom.scale(newScale)
+		graphG.attr("transform", "translate(" + x + " ," + y + ") scale(" + newScale + ")");
+	}
+
+	function reset() {
+		initialTranslate = [initialX, initialY];
+		zoom.translate(initialTranslate);
+		zoom.scale(initialS)
+		graphG.attr("transform", "translate(" + initialX + " ," + initialY + ") scale(" + initialS + ")");
+	}
+
+	reset(); //removes the random jump after first click issue
+}
+  </script>
+  <script id="adjacency1x1">
+   createAdjacency1x1Matrix();
+  function createAdjacency1x1Matrix() {
+  	var size = {
+  	  width: document.body.clientWidth || window.innerWidth,
+  	  height: document.body.clientHeight || window.innerHeight
+  	}
+
+  	var margin = {top: 0, right: 0, bottom: 0, left: 0},
+  		width = size['width'] - margin.left - margin.right,
+  		height = size['height'] - 1 - margin.top - margin.bottom;
+
+  	var x = d3.scale.linear()
+  		.domain([-width / 2, width / 2])
+  		.range([0, width]);
+
+  	var y = d3.scale.linear()
+  		.domain([-height / 2, height / 2])
+  		.range([height, 0]);
+
+  	var zoom = d3.behavior.zoom()
+  		.x(x)
+  		.y(y)
+  		.scaleExtent([0.1, 32])
+  		.on("zoom", zoom);
+
+  	var canvas = d3.select("#adjacency1x1").append("svg")
+  		.attr("width", width + margin.left + margin.right)
+  		.attr("height", height + margin.top + margin.bottom)
+  		.append("g")
+  		.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+  		.call(zoom);
+
+  	var content = canvas.append("g");
+  		
+  	var cellWidth = 25;
+
+  	var data = JSON.parse(document.getElementById('dataAdjacency1x1').innerHTML);
+
+  	/*var i = data['links'].length
+  	while (i--) {
+  		l = data['links'][i];
+  		if (l.relation.startsWith("taxonomy")) {
+  			data['links'].splice(i, 1);
+  		}
+  	}*/
+
+  	//sort nodes
+  	dataNodesA = []
+   	dataNodesB = []
+  	collectedNodes = {}
+  	for (i in data['links']) {
+  		l = data['links'][i];
+  		dataNodesA.push(data['nodes'][l.source]);
+   		dataNodesB.push(data['nodes'][l.target]);
+  		collectedNodes[data['nodes'][l.source].id] = [];
+  		collectedNodes[data['nodes'][l.target].id] = [];
+     		l.source = data['nodes'][l.source].id;
+     		l.target = data['nodes'][l.target].id;
+  	}
+  	dataNodesA = dataNodesA.filter(function(item, pos) {
+   		return dataNodesA.indexOf(item) == pos;
+   	});
+   	dataNodesB = dataNodesB.filter(function(item, pos) {
+   		return dataNodesB.indexOf(item) == pos;
+   	});
+  	for (i in data['nodes']) {
+  		n = data['nodes'][i];
+  		if (!(n.id in collectedNodes)) {
+  			if (data['links'].length == 0) {
+  				if (dataNodesA.length == 0) {
+  					dataNodesA.push(n)
+  				} else if (dataNodesA[0].group = n.group) {
+  					dataNodesA.push(n);
+  				} else {
+  					dataNodesB.push(n);
+  				}
+  			} else {
+  				if(dataNodesA[0].group == n.group) {
+  					dataNodesA.push(n);
+  				}
+  				if(dataNodesB[0].group == n.group) {
+  					dataNodesB.push(n);
+  				}
+  			}
+  			collectedNodes[n.id] = []
+  		}
+  	}
+  	
+  	data['nodes'] = data['nodes'].sort(function(a, b) { 
+  										return d3.ascending(a.id, b.id); 
+  								});
+  		
+  	groupNodes = { }
+  	for (i in data['nodes']) {
+  		n = data['nodes'][i];
+  		id = n.group;
+  		if (id in groupNodes) {
+  			groupNodes[id].push(n);
+  		} else {
+  			groupNodes[id] = [];
+  			groupNodes[id].push(n);
+  		}
+  	}
+  	if(Object.keys(groupNodes).length != 2) {
+  		return;
+  	}
+  						
+  	//sort links for legend
+  	data['links'] = data['links'].sort(function(a, b) { 
+  									if(a.relation.startsWith("taxonomy") && b.relation.startsWith("taxonomy")) {
+  										idA = a.relation.split(".")[1];
+  										idB = b.relation.split(".")[1];
+  										if (idA == idB) {
+  											return d3.ascending(a.relation, b.relation);
+  										}
+  										return d3.ascending(idA, idB);
+  									}
+  									return d3.ascending(a.relation, b.relation); 
+  								});
+  	for (i in data['links']) {
+  		l = data['links'][i];
+  		l.source = dataNodesA.map(function (n) {
+  										return n.id;
+  									}).indexOf(l.source)
+  		l.target = dataNodesB.map(function (n) {
+  										return n.id;
+  									}).indexOf(l.target)
+  	}
+
+  	var linksMap = { };
+  	for (i in data['links']) {
+  		var l = data['links'][i];
+  		linksMap[l.source + ";" + l.target] = l;
+  	}
+  	var cells = [];
+  	for (i in dataNodesA) {
+  		for (j in dataNodesB) {
+  			var id = i + ";" + j;
+  			cells.push({ 
+  						id: id,
+  						source: i, 
+  						target: j, 
+  						relation: id in linksMap ? linksMap[id].relation : ""
+  					});
+  		}
+  	}
+  	/*
+  	c20 = d3.scale.category20();
+  	colorIndex = 0;
+  	var colors = { 
+  			"" : "white",
+  			"equals" : c20(colorIndex++),
+  			"disjoint" : c20(colorIndex++),
+  			"includes" : c20(colorIndex++),
+  			"is_included_in" : c20(colorIndex++),
+  			"overlaps" : c20(colorIndex++)
+  	}
+  	*/
+
+  	var colors = {
+  		"" : "white",
+  		"equals" : "#7f7f7f", //dark gray
+  		"disjoint" : "#c7c7c7", //light gray
+  		"includes" : "#e6550d", //dark orange
+  		"is_included_in" : "#fd8d3c", //light orange
+  		"overlaps" : "#d62728" //red
+  	}
+
+  	//var taxonomyPairColors = ["#393b79", "#5254a3", "#637939", "#8ca252", "#8c6d31", "#bd9e39", "#843c39", "#ad494a", "#7b4173", "#a55194"];
+  	//colorIndex = 0;
+  	for (i in data['links']) {
+  		var l = data['links'][i];
+  		/*if (!(l.relation in colors)) {
+  			colors[l.relation] = taxonomyPairColors[colorIndex];
+  			colorIndex = colorIndex + 1 % 4;
+  		}*/
+  		cells.push({ 
+  					id: l.source + ";" + l.target, 
+  					source: l.source, 
+  					target: l.target, 
+  					relation: l.relation 
+  				});
+  	}
+
+  	var x = d3.scale.linear()
+  		.domain([-width / 2, width / 2])
+  		.range([0, width]);
+
+  	var y = d3.scale.linear()
+  		.domain([-height / 2, height / 2])
+  		.range([height, 0]);
+
+  	adjacencyView = content.append("g")
+  			  .attr("transform", "translate(90,90)");
+  			adjacencyView.selectAll("rect")
+  			  .data(cells)
+  			  .enter()
+  			  .append("rect")
+  			  .attr("width", cellWidth)
+  			  .attr("height", cellWidth)
+  			  .attr("x", function (d) {return d.target * cellWidth})
+  			  .attr("y", function (d) {return d.source * cellWidth})
+  			  .style("fill", function(d) { return colors[d.relation]; })
+  			  .style("stroke", "black")
+  			  .on("mouseover", mouseover)
+  			  .on("mouseout", mouseout);
+  			
+  	var matrixScaleA = d3.scale.ordinal()
+  						.domain(dataNodesA.map(function (n) {
+  											return n.id
+  										}))
+  						.rangePoints([0, dataNodesA.length * cellWidth], 1);
+  	var matrixScaleB = d3.scale.ordinal()
+  						.domain(dataNodesB.map(function (n) {
+  											return n.id
+  										}))
+  						.rangePoints([0, dataNodesB.length * cellWidth], 1);						
+  	/*tickValues = []
+  	for (i = 0; i < data['nodes'].length - 2; i++) { 
+  		tickValues.push(i * cellWidth + 0.5 * cellWidth)
+  	}*/
+  	/*for (i in data['nodes']) {
+  		console.log(i);
+  		console.log(i * cellWidth);
+  		console.log(i * cellWidth - 0.5 * cellWidth);
+  		tickValues.push(i * cellWidth - 0.5 * cellWidth)
+  		
+  	}
+  	console.log(tickValues);*/
+  	xAxis = d3.svg.axis()
+  				.scale(matrixScaleB)
+  				//.tickValues(tickValues)
+  				.orient("top")
+  				.tickSize(0); 
+  	yAxis = d3.svg.axis()
+  				.scale(matrixScaleA)
+  				//.tickValues(tickValues)
+  				.orient("left")
+  				.tickSize(0);    
+  	adjacencyView.append("g")
+  				.call(xAxis)
+  				.selectAll("text")
+  				.style("text-anchor", "end")
+  				.attr("transform", "translate(-8,-10) rotate(90)");
+  	adjacencyView.append("g")
+  				.call(yAxis)
+  				.attr("transform", "translate(-10, 0)");
+  	  
+  	function mouseover(d, i) {
+  		d3.selectAll("div#adjacency1x1 rect")
+  			/*.style("stroke", function(o) {
+  				return (o.source == d.source || o.target == d.target) ? "black" : "gray";
+  			})*/
+  			.style("stroke-width", function(o) {
+  				return (o.source == d.source || o.target == d.target) ? "3px" : "1px";
+  			});
+  		d3.selectAll("div#adjacency1x1 g#legend g text").classed("activeLegend", function(c, i) { 
+  													return c == d.relation;
+  												});
+  		d3.selectAll("div#adjacency1x1 g.tick text").classed("activeTick", function(c, i) {
+  													return dataNodesA[d.source].id == c || dataNodesB[d.target].id == c;
+  												});
+  	}
+
+  	function mouseout() {
+  		d3.selectAll("div#adjacency1x1 rect").style("stroke-width", "1px");
+  		d3.selectAll("div#adjacency1x1 legend g text").classed("activeLegend", false);
+  		d3.selectAll("div#adjacency1x1 g.tick text").classed("activeTick", false);
+  	}
+
+  	content.append("g").append("text").text("From").style("font-weight", "bold").attr("transform", "translate(5, 70)");
+  	content.append("g").append("text").text("To").style("font-weight", "bold").attr("transform", "translate(60, 30)");
+
+  	legend = []
+  	for (c in colors) {
+  		if (c != "") { 
+  			legend.push(c);
+  		}
+  	}
+  	adjacencyViewLegend = content.append("g")
+  		.attr("transform", "translate(" + (((dataNodesA.length + dataNodesB.length) * cellWidth) + 150) + ", 80)")
+  		.attr("id", "legend");
+  	legendGs = adjacencyViewLegend.selectAll("g")
+  	  .data(legend);
+  	legendG = legendGs.enter()
+  	  .append("g")
+  	legendG.append("rect")
+  	  .attr("width", cellWidth)
+  	  .attr("height", cellWidth)
+  	  .attr("x", function (d, i) {return 0; })
+  	  .attr("y", function (d, i) {return i * cellWidth})
+  	  .style("fill", function(d) { return colors[d]; })
+  	  .style("stroke", "black");
+  	legendG.append("text")
+  	  .text(function(d) { return d; })
+  	  .attr("x", function (d, i) { return 40; })
+  	  .attr("y", function (d, i) { return (i * (cellWidth)) + 18; });	
+
+  	function zoom() {
+  		x = d3.event.translate[0]
+  		y = d3.event.translate[1]
+  		content.attr("transform", "translate(" + d3.event.translate + ") scale(" + d3.event.scale + ")");
+  	}
+
+  	d3.select("div#adjacency1x1 button#reset").on("click", reset);
+  	d3.select("div#adjacency1x1 button#zoomin").on("click", zoomIn);
+  	d3.select("div#adjacency1x1 button#zoomout").on("click", zoomOut);
+
+
+  	var originalWidth = dataNodesB.length * cellWidth + 100;
+  	var originalHeight = dataNodesA.length * cellWidth + 100;
+  	initialScale = Math.min(width/originalWidth, height/originalHeight) * 0.7
+  	var t = d3.transform(canvas.attr("transform")),
+  			initialX = (size['width'] - (initialScale * originalWidth))/2, //t.translate[0],
+  			initialY = 20, //t.translate[1],
+  			initialS = initialScale; //t.scale[0];
+
+  	function zoomIn() {
+  		var t = d3.transform(content.attr("transform")),
+  			x = t.translate[0],
+  			y = t.translate[1],
+  			s = t.scale[0];
+  		var newScale = (s + 0.1);
+  		zoom.scale(newScale)
+  		content.attr("transform", "translate(" + x + " ," + y + ") scale(" + newScale + ")");
+  	}
+
+  	function zoomOut() {
+  		var t = d3.transform(content.attr("transform")),
+  			x = t.translate[0],
+  			y = t.translate[1],
+  			s = t.scale[0];
+  		var newScale = (s - 0.1);
+  		zoom.scale(newScale)
+  		content.attr("transform", "translate(" + x + " ," + y + ") scale(" + newScale + ")");
+  	}
+
+  	function reset() {
+  		initialTranslate = [initialX, initialY];
+  		zoom.translate(initialTranslate);
+  		zoom.scale(initialS)
+  		content.attr("transform", "translate(" + initialX + " ," + initialY + ") scale(" + initialS + ")");
+  	}
+
+  	reset(); //removes the random jump after first click issue
+  }
+  </script>
+  <script id="adjacency">
+   createAdjacencyMatrix();
+function createAdjacencyMatrix() {
+	var size = {
+	  width: document.body.clientWidth || window.innerWidth,
+	  height: document.body.clientHeight || window.innerHeight
+	}
+
+	var margin = {top: 0, right: 0, bottom: 0, left: 0},
+		width = size['width'] - margin.left - margin.right,
+		height = size['height'] - 1 - margin.top - margin.bottom;
+
+	var x = d3.scale.linear()
+		.domain([-width / 2, width / 2])
+		.range([0, width]);
+
+	var y = d3.scale.linear()
+		.domain([-height / 2, height / 2])
+		.range([height, 0]);
+
+	var zoom = d3.behavior.zoom()
+		.x(x)
+		.y(y)
+		.scaleExtent([0.1, 32])
+		.on("zoom", zoom);
+
+	var canvas = d3.select("#adjacency").append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+		.append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+		.call(zoom);
+
+	var content = canvas.append("g");
+		
+	var cellWidth = 25;
+
+	var data = JSON.parse(document.getElementById('dataAdjacency').innerHTML);
+
+	//sort nodes
+	for (i in data['links']) {
+		l = data['links'][i];
+		l.source = data['nodes'][l.source].id
+		l.target = data['nodes'][l.target].id
+	}
+	data['nodes'] = data['nodes'].sort(function(a, b) { 
+										return d3.ascending(a.id, b.id); 
+									});
+	//sort links for legend
+	data['links'] = data['links'].sort(function(a, b) { 
+									if(a.relation.startsWith("taxonomy") && b.relation.startsWith("taxonomy")) {
+										idA = a.relation.split(".")[1];
+										idB = b.relation.split(".")[1];
+										if (idA == idB) {
+											return d3.ascending(a.relation, b.relation);
+										}
+										return d3.ascending(idA, idB);
+									}
+									return d3.ascending(a.relation, b.relation); 
+								});
+	for (i in data['links']) {
+		l = data['links'][i];
+		l.source = data['nodes'].map(function (n) {
+										return n.id;
+									}).indexOf(l.source)
+		l.target = data['nodes'].map(function (n) {
+										return n.id;
+									}).indexOf(l.target)
+	}
+
+	var linksMap = { };
+	for (i in data['links']) {
+		var l = data['links'][i];
+		linksMap[l.source + ";" + l.target] = l;
+	}
+	var cells = [];
+	for (i in data['nodes']) {
+		for (j in data['nodes']) {
+			var id = i + ";" + j;
+			cells.push({ 
+						id: id,
+						source: i, 
+						target: j, 
+						relation: id in linksMap ? linksMap[id].relation : ""
+					});
+		}
+	}
+	/*
+	c20 = d3.scale.category20();
+	colorIndex = 0;
+	var colors = { 
+			"" : "white",
+			"equals" : c20(colorIndex++),
+			"disjoint" : c20(colorIndex++),
+			"includes" : c20(colorIndex++),
+			"is_included_in" : c20(colorIndex++),
+			"overlaps" : c20(colorIndex++)
+	}
+	*/
+
+	var colors = {
+		"" : "white",
+		"equals" : "#7f7f7f", //dark gray
+		"disjoint" : "#c7c7c7", //light gray
+		"includes" : "#e6550d", //dark orange
+		"is_included_in" : "#fd8d3c", //light orange
+		"overlaps" : "#d62728" //red
+	}
+
+	var taxonomyPairColors = ["#393b79", "#5254a3", "#637939", "#8ca252", "#8c6d31", "#bd9e39", "#843c39", "#ad494a", "#7b4173", "#a55194"];
+	colorIndex = 0;
+	for (i in data['links']) {
+		var l = data['links'][i];
+		if (!(l.relation in colors)) {
+			colors[l.relation] = taxonomyPairColors[colorIndex];
+			colorIndex = colorIndex + 1 % 4;
+		}
+		cells.push({ 
+					id: l.source + ";" + l.target, 
+					source: l.source, 
+					target: l.target, 
+					relation: l.relation 
+				});
+	}
+
+	var x = d3.scale.linear()
+		.domain([-width / 2, width / 2])
+		.range([0, width]);
+
+	var y = d3.scale.linear()
+		.domain([-height / 2, height / 2])
+		.range([height, 0]);
+
+	adjacencyView = content.append("g")
+			  .attr("transform", "translate(90,90)");
+			adjacencyView.selectAll("rect")
+			  .data(cells)
+			  .enter()
+			  .append("rect")
+			  .attr("width", cellWidth)
+			  .attr("height", cellWidth)
+			  .attr("x", function (d) {return d.target * cellWidth})
+			  .attr("y", function (d) {return d.source * cellWidth})
+			  .style("fill", function(d) { return colors[d.relation]; })
+			  .style("stroke", "black")
+			  .on("mouseover", mouseover)
+			  .on("mouseout", mouseout);
+			
+	var matrixScale = d3.scale.ordinal()
+						.domain(data['nodes'].map(function (n) {
+											return n.id
+										}))
+						.rangePoints([0, data['nodes'].length * cellWidth], 1);
+						
+	/*tickValues = []
+	for (i = 0; i < data['nodes'].length - 2; i++) { 
+		tickValues.push(i * cellWidth + 0.5 * cellWidth)
+	}*/
+	/*for (i in data['nodes']) {
+		console.log(i);
+		console.log(i * cellWidth);
+		console.log(i * cellWidth - 0.5 * cellWidth);
+		tickValues.push(i * cellWidth - 0.5 * cellWidth)
+		
+	}
+	console.log(tickValues);*/
+	xAxis = d3.svg.axis()
+				.scale(matrixScale)
+				//.tickValues(tickValues)
+				.orient("top")
+				.tickSize(0); 
+	yAxis = d3.svg.axis()
+				.scale(matrixScale)
+				//.tickValues(tickValues)
+				.orient("left")
+				.tickSize(0);    
+	adjacencyView.append("g")
+				.call(xAxis)
+				.selectAll("text")
+				.style("text-anchor", "end")
+				.attr("transform", "translate(-8,-10) rotate(90)");
+	adjacencyView.append("g")
+				.call(yAxis)
+				.attr("transform", "translate(-10, -10)");
+	  
+	function mouseover(d, i) {
+		d3.selectAll("div#adjacency rect")
+			/*.style("stroke", function(o) {
+				return (o.source == d.source || o.target == d.target) ? "black" : "gray";
+			})*/
+			.style("stroke-width", function(o) {
+				return (o.source == d.source || o.target == d.target) ? "3px" : "1px";
+			});
+		d3.selectAll("div#adjacency g#legend g text").classed("activeLegend", function(c, i) { 
+													return c == d.relation;
+												});
+		d3.selectAll("div#adjacency g.tick text").classed("activeTick", function(c, i) {
+													return data['nodes'][d.source].id == c || data['nodes'][d.target].id == c;
+												});
+	}
+
+	function mouseout() {
+		d3.selectAll("div#adjacency rect").style("stroke-width", "1px");
+		d3.selectAll("div#adjacency legend g text").classed("activeLegend", false);
+		d3.selectAll("div#adjacency g.tick text").classed("activeTick", false);
+	}
+
+	content.append("g").append("text").text("From").style("font-weight", "bold").attr("transform", "translate(5, 70)");
+	content.append("g").append("text").text("To").style("font-weight", "bold").attr("transform", "translate(60, 30)");
+
+	legend = []
+	for (c in colors) {
+		if (c != "") { 
+			legend.push(c);
+		}
+	}
+	adjacencyViewLegend = content.append("g")
+		.attr("transform", "translate(" + ((data['nodes'].length * cellWidth) + 150) + ", 80)")
+		.attr("id", "legend");
+	legendGs = adjacencyViewLegend.selectAll("g")
+	  .data(legend);
+	legendG = legendGs.enter()
+	  .append("g")
+	legendG.append("rect")
+	  .attr("width", cellWidth)
+	  .attr("height", cellWidth)
+	  .attr("x", function (d, i) {return 0; })
+	  .attr("y", function (d, i) {return i * cellWidth})
+	  .style("fill", function(d) { return colors[d]; })
+	  .style("stroke", "black");
+	legendG.append("text")
+	  .text(function(d) { return d; })
+	  .attr("x", function (d, i) { return 40; })
+	  .attr("y", function (d, i) { return (i * (cellWidth)) + 18; });	
+
+	function zoom() {
+		x = d3.event.translate[0]
+		y = d3.event.translate[1]
+		content.attr("transform", "translate(" + d3.event.translate + ") scale(" + d3.event.scale + ")");
+	}
+
+	d3.select("div#adjacency button#reset").on("click", reset);
+	d3.select("div#adjacency button#zoomin").on("click", zoomIn);
+	d3.select("div#adjacency button#zoomout").on("click", zoomOut);
+
+
+	var originalWidth = data['nodes'].length * cellWidth + 100;
+	var originalHeight = data['nodes'].length * cellWidth + 100;
+	initialScale = Math.min(width/originalWidth, height/originalHeight) * 0.7
+	var t = d3.transform(canvas.attr("transform")),
+			initialX = (size['width'] - (initialScale * originalWidth))/2, //t.translate[0],
+			initialY = 20, //t.translate[1],
+			initialS = initialScale; //t.scale[0];
+
+	function zoomIn() {
+		var t = d3.transform(content.attr("transform")),
+			x = t.translate[0],
+			y = t.translate[1],
+			s = t.scale[0];
+		var newScale = (s + 0.1);
+		zoom.scale(newScale)
+		content.attr("transform", "translate(" + x + " ," + y + ") scale(" + newScale + ")");
+	}
+
+	function zoomOut() {
+		var t = d3.transform(content.attr("transform")),
+			x = t.translate[0],
+			y = t.translate[1],
+			s = t.scale[0];
+		var newScale = (s - 0.1);
+		zoom.scale(newScale)
+		content.attr("transform", "translate(" + x + " ," + y + ") scale(" + newScale + ")");
+	}
+
+	function reset() {
+		initialTranslate = [initialX, initialY];
+		zoom.translate(initialTranslate);
+		zoom.scale(initialS)
+		content.attr("transform", "translate(" + initialX + " ," + initialY + ") scale(" + initialS + ")");
+	}
+
+	reset(); //removes the random jump after first click issue
+}
+  </script>
+ </body>
+</html>
