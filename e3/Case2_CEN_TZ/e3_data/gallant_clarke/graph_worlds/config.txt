@@ -1,0 +1,21 @@
+isCoverage: True
+isSiblingDisjointness: True
+regions: mncb
+
+cli behavior:
+  imageFormat: svg
+  maxWorldsToShow: 5
+  showOutputFileLocation: false
+environment:
+  euler2Executable: euler2
+  htmlViewer: xdg-open {file}
+  imageViewer: xdg-open {file}
+reasoning:
+  defaultIsCoverage: true
+  defaultIsSiblingDisjointness: true
+  defaultRegions: mncb
+  reasoner: dlv
+  fixMethod: topdown
+sharing:
+  stateGitRepo: http://github.com/EulerProject/ASIST17.git
+  workspaceGitRepo: http://github.com/EulerProject/ASIST17.git
