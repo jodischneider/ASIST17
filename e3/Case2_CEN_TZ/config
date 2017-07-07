@@ -1,7 +1,3 @@
-isCoverage: True
-isSiblingDisjointness: True
-regions: mncb
-
 cli behavior:
   imageFormat: svg
   maxWorldsToShow: 5
@@ -17,5 +13,5 @@ reasoning:
   reasoner: dlv
   fixMethod: topdown
 sharing:
-  stateGitRepo:
-  workspaceGitRepo: http://github.com/rodenhausen/asisttest.git
+  stateGitRepo: http://github.com/EulerProject/ASIST17.git
+  workspaceGitRepo: http://github.com/EulerProject/ASIST17.git
