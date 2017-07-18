@@ -3,6 +3,7 @@
 ## Abstract
 
 ## Paper
+Yi-Yun Cheng, Nico Franz, Jodi Schneider, Shizhuo Yu, Thomas Rodenhausen, Bertram Ludäscher. “Agreeing to disagree: reconciling conflicting taxonomic views using a logic-based approach.” ASIST 2017, Crystal City, Virginia, USA, October 27-November 1
 [Link to paper]()
 
 ## Replay use cases
